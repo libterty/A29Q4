@@ -1,7 +1,7 @@
 const mongoose = require('mongoose')
 const Schema = mongoose.Schema
 
-const urlSchema = new Schema({
+const UrlSchema = new Schema({
     link: {
         type: String,
         required: true
@@ -10,6 +10,6 @@ const urlSchema = new Schema({
     shortenLink: {
         type: String
     }
-})
+}, { timestamps: true })
 
-module.exports = mongoose.model('url', urlSchema)
+module.exports = mongoose.model('Url', UrlSchema)
